@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { BsTwitter } from "react-icons/bs";
 
-const SidebarLogo: React.FC = () => {
+function SidebarLogo() {
   const router = useRouter();
   return (
     <div
@@ -11,5 +11,5 @@ const SidebarLogo: React.FC = () => {
       <BsTwitter size={28} color="white" />
     </div>
   );
-};
+}
 export default SidebarLogo;

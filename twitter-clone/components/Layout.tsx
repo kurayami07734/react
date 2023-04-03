@@ -1,10 +1,10 @@
-import React from "react";
+import FollowBar from "./layout/FollowBar";
 import Sidebar from "./layout/Sidebar";
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+function Layout({ children }: LayoutProps) {
   return (
     <div className="h-screen bg-black">
       <div className="xl:px-30 container mx-auto h-full max-w-6xl">
@@ -13,9 +13,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="col-span-3 border-x-[1px] border-neutral-500 lg:col-span-2">
             {children}
           </div>
+          <FollowBar />
         </div>
       </div>
     </div>
   );
-};
+}
 export default Layout;

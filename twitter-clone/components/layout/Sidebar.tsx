@@ -1,8 +1,10 @@
 import { BsBellFill, BsHouseFill } from "react-icons/bs";
 import SidebarLogo from "./SidebarLogo";
+import SidebarTweetButton from "./SidebarTweetButton";
 import { FaUser } from "react-icons/fa";
+import { BiLogOut } from "react-icons/bi";
 import SidebarItem from "./SidebarItem";
-const Sidebar: React.FC = () => {
+function Sidebar() {
   const links = [
     {
       label: "Home",
@@ -33,9 +35,16 @@ const Sidebar: React.FC = () => {
               icon={link.icon}
             />
           ))}
+          <SidebarItem
+            onClick={() => {}}
+            icon={BiLogOut}
+            href=""
+            label="Logout"
+          />
+          <SidebarTweetButton />
         </div>
       </div>
     </div>
   );
-};
+}
 export default Sidebar;
